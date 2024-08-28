@@ -6,8 +6,8 @@ export const Button = defineStyleConfig({
     textTransform: 'uppercase',
     borderRadius: 'base',
     _disabled: {
-        filter: "grayscale(1)"
-    }
+      filter: 'grayscale(1)',
+    },
   },
   sizes: {
     sm: {
@@ -22,12 +22,14 @@ export const Button = defineStyleConfig({
     },
   },
   variants: {
-    myVarinat: {
-        border: "1px solid",
+    myVariant: {
+      background: '#00C7A3',
+      borderRadius: '5px',
+      p: '0.75rem',
+      fontSize: '0.75rem',
     },
     outline: {
-      border: '2px solid',
-      borderColor: 'purple.500',
+      border: '1px solid',
       color: 'purple.500',
     },
     solid: {
@@ -36,7 +38,7 @@ export const Button = defineStyleConfig({
     },
   },
   defaultProps: {
-    size: "md",
-    variant: "outline"
-  }
+    size: 'md',
+    variant: 'outline',
+  },
 });

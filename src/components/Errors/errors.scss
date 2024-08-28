@@ -1,70 +1,68 @@
-@import '../../SCSS/main.scss';
+// .error-container {
+//   width: 100vw;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: darkgrey;
 
-.error-container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: darkgrey;
+//   .error-smaller_container {
+//     height: 50%;
+//     width: 40%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 2rem;
+//     padding: 5rem;
+//     background-color: gold;
+//     box-shadow: 20px 20px lightgrey;
+//     border: 1px solid grey;
+//     @include md {
+//       height: 50%;
+//       width: 50%;
+//       padding: 6rem;
+//     }
 
-  .error-smaller_container {
-    height: 50%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 5rem;
-    background-color: gold;
-    box-shadow: 20px 20px lightgrey;
-    border: 1px solid grey;
-    @include md {
-      height: 50%;
-      width: 50%;
-      padding: 6rem;
-    }
+//     .error-title {
+//       //   font-family: $font-main;
+//       font-size: 2rem;
+//       margin-bottom: -2rem;
+//       @include md {
+//         font-size: 3rem;
+//       }
+//     }
+//     .error-icon_container {
+//       .error-icon {
+//         font-size: 5rem;
+//       }
+//     }
+//     .error-description {
+//       width: 100%;
+//       //   font-family: $font-main;
+//       font-size: 1rem;
+//       text-align: center;
+//       line-height: 2;
+//     }
+//     .error-hint {
+//       width: 90%;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       text-align: center;
+//       //   font-family: $font-main;
+//       font-size: 0.8rem;
+//       font-weight: 300;
+//       line-height: 1.2;
+//       padding: 1rem;
+//       border: 1px solid darkgrey;
 
-    .error-title {
-      //   font-family: $font-main;
-      font-size: 2rem;
-      margin-bottom: -2rem;
-      @include md {
-        font-size: 3rem;
-      }
-    }
-    .error-icon_container {
-      .error-icon {
-        font-size: 5rem;
-      }
-    }
-    .error-description {
-      width: 100%;
-      //   font-family: $font-main;
-      font-size: 1rem;
-      text-align: center;
-      line-height: 2;
-    }
-    .error-hint {
-      width: 90%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      //   font-family: $font-main;
-      font-size: 0.8rem;
-      font-weight: 300;
-      line-height: 1.2;
-      padding: 1rem;
-      border: 1px solid darkgrey;
-
-      .error-hint-b {
-        text-transform: uppercase;
-        text-decoration: underline;
-        font-weight: 500;
-        margin-right: 0.5rem;
-      }
-    }
-  }
-}
+//       .error-hint-b {
+//         text-transform: uppercase;
+//         text-decoration: underline;
+//         font-weight: 500;
+//         margin-right: 0.5rem;
+//       }
+//     }
+//   }
+// }
