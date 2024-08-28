@@ -4,7 +4,6 @@ import Form from './pages/Form/Form';
 import SignIn from './components/Auth/SignIn';
 import SignUp from './components/Auth/SignUp';
 import Dashboard from './pages/Dashboard/Dashboard';
-import Profile from './pages/Profile/Profile';
 import SignOut from './components/Auth/SignOut';
 
 function App() {
@@ -12,10 +11,6 @@ function App() {
     {
       path: '/',
       element: <Home />,
-    },
-    {
-      path: '/profile',
-      element: <Profile />,
     },
     {
       path: '/new',
