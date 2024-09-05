@@ -11,7 +11,7 @@ import {
   TableContainer,
 } from '@chakra-ui/react';
 
-import { FOOD_LIST, LIST_TR } from './Data';
+import { FOODPRODUCTS_LIST, LIST_TR } from './Data';
 
 const Food = () => {
   return (
@@ -44,7 +44,7 @@ const Food = () => {
               </Tr>
             </Thead>
             <Tbody>
-              {FOOD_LIST.map(({ number, name, bought, comment }) => {
+              {FOODPRODUCTS_LIST.map(({ number, name, bought, comment }) => {
                 return (
                   <Tr key={number}>
                     <Td>{number}</Td>

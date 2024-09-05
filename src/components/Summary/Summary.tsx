@@ -13,7 +13,7 @@ import {
   Button,
 } from '@chakra-ui/react';
 import { GUEST_LIST, LIST_TR } from '../Step4/Data';
-import { FOOD_LIST, LIST_TR as LIST_TR_FOOD } from '../Step5/Data';
+import { FOODPRODUCTS_LIST, LIST_TR as LIST_TR_FOOD } from '../Step5/Data';
 import { SCHEDULE_LIST, LIST_TR as LIST_TR_SCHEDULE } from '../Step7/Data';
 import { PiFilePdfFill } from 'react-icons/pi';
 import { SiJpeg } from 'react-icons/si';
@@ -48,6 +48,7 @@ const Summary = () => {
           </Container>
         </Container>
       </Container>
+
       {/* Step 2 - When */}
       <Container>
         <Text fontSize='xl' fontWeight='600' color='#00C7A3'>
@@ -230,7 +231,7 @@ const Summary = () => {
               </Tr>
             </Thead>
             <Tbody>
-              {FOOD_LIST.map(({ number, name, amount, bought, comment }) => {
+              {FOODPRODUCTS_LIST.map(({ number, name, amount, bought, comment }) => {
                 return (
                   <Tr key={number}>
                     <Td>{number}</Td>

@@ -1,4 +1,4 @@
-export const FOOD_LIST = [
+export const FOODPRODUCTS_LIST = [
   {
     number: 1,
     name: 'Tomato',

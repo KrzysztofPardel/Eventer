@@ -1,12 +1,11 @@
-import Hero from '../../components/Hero/Hero';
-import About from '../../components/Home/About';
+import { Container } from '@chakra-ui/react';
+import Hero from '../../components/Home/Hero';
 
 const Home = () => {
   return (
-    <>
+    <Container p='0rem'>
       <Hero />
-      <About />
-    </>
+    </Container>
   );
 };
 

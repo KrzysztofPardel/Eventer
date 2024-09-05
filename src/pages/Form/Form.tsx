@@ -7,22 +7,29 @@ import Food from '../../components/Step5/Food';
 import Budget from '../../components/Step6/Budget';
 import Schedule from '../../components/Step7/Schedule';
 import Summary from '../../components/Summary/Summary';
-import { useForm } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
 const Form = () => {
-  // const {
-  //   handleSubmit,
-  //   register,
-  //   // getValues,
-  //   formState: { errors, isSubmitting },
-  // } = useForm({
-  //   // defaultValues:{
-  //   //   test:"cos"
-  //   // }
-  // });
+  const {
+    handleSubmit,
+    register,
+    watch,
+    formState: { errors, isSubmitting },
+  } = useForm();
+
+  const formValues = watch();
+
+  const onSubmit: SubmitHandler<any> = (values: unknown) => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        alert(JSON.stringify(values, null, 2));
+        resolve();
+      }, 3000);
+    });
+  };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <Heading as='h1' size='3xl' fontWeight='100' textAlign='center'>
         Eventer
       </Heading>
@@ -30,14 +37,14 @@ const Form = () => {
       <Text as='h3' size='xs' textAlign='center' fontWeight='200'>
         Simple event planning in 7 steps
       </Text>
-      <What />
-      <When />
-      <Where />
-      <Guests />
-      <Food />
-      <Budget />
-      <Schedule />
-      <Summary />
+      <What register={register} errors={errors} />
+      <When register={register} errors={errors} />
+      <Where register={register} errors={errors} />
+      <Guests register={register} errors={errors} />
+      <Food register={register} errors={errors} />
+      <Budget register={register} errors={errors} />
+      <Schedule register={register} errors={errors} />
+      <Summary formValues={formValues} />
     </form>
   );
 };

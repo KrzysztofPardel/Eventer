@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import ErrorBoundary from './ErrorBoundary.tsx';
 import './output.css';
 import { ChakraProvider } from '@chakra-ui/react';
@@ -11,7 +11,7 @@ const AppLazy = lazy(() => import('./App.tsx'));
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <ErrorBoundary>
         <ChakraProvider theme={theme}>
           <Suspense fallback={<div>Loading...</div>}>
@@ -20,6 +20,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           </Suspense>
         </ChakraProvider>
       </ErrorBoundary>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
 );
+
+;
