@@ -1,4 +1,6 @@
 import { useRoutes } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Session } from '@supabase/supabase-js';
 import Home from './pages/Home/Home';
 import Form from './pages/Form/Form';
 import SignIn from './components/Auth/SignIn';
@@ -6,8 +8,33 @@ import SignUp from './components/Auth/SignUp';
 import Dashboard from './pages/Dashboard/Dashboard';
 import SignOut from './components/Auth/SignOut';
 import About from './components/Home/About';
+import DashboardMessage from './components/Dashboard/DashboardMessage';
+import { supabase } from '../src/supabaseClient';
 
 function App() {
+  const [session, setSession] = useState<Session | null>(null);
+
+  useEffect(() => {
+    //function to fetch the initial session
+    const fetchSession = async () => {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      setSession(session);
+    };
+    //call the function to set the initial session state
+    fetchSession();
+
+    //set up the listener for session changes
+    const { data: authListener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+
+    return () => {
+      authListener?.subscription.unsubscribe;
+    };
+  }, []);
+
   let element = useRoutes([
     {
       path: '/',
@@ -35,7 +62,7 @@ function App() {
     },
     {
       path: '/dashboard',
-      element: <Dashboard />,
+      element: session ? <Dashboard /> : <DashboardMessage />,
     },
   ]);
   return element;

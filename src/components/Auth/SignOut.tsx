@@ -1,6 +1,9 @@
 import { Container, Text, Heading, Divider, Button } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 const SignOut = () => {
+  const navigate = useNavigate();
+
   return (
     <Container h='80vh'>
       <Heading as='h1' size='3xl' fontWeight='100' textAlign='center'>
@@ -20,7 +23,14 @@ const SignOut = () => {
         h='100%'
       >
         <Text>You have been signed out</Text>
-        <Button background='#D9D9D9' color='black' fontWeight='300' textTransform='none' w='10rem'>
+        <Button
+          background='#D9D9D9'
+          color='black'
+          fontWeight='300'
+          textTransform='none'
+          w='10rem'
+          onClick={() => navigate('/')}
+        >
           ok
         </Button>
       </Container>

@@ -1,4 +1,13 @@
 import { Container, Text, Heading, Divider } from '@chakra-ui/react';
+import {
+  PiNumberSquareOneFill,
+  PiNumberSquareTwoFill,
+  PiNumberSquareThreeFill,
+  PiNumberSquareFourFill,
+  PiNumberSquareFiveFill,
+  PiNumberSquareSixFill,
+  PiNumberSevenFill,
+} from 'react-icons/pi';
 
 const About = () => {
   return (
@@ -14,19 +23,35 @@ const About = () => {
         Simple event planning in 7 steps
       </Text>
       <Text as='h3' fontSize='1.2rem' fontWeight='200'>
-        For most of the events and hangouts you run, you don’t need a robust app, just a simple form
-        which will help you keep things clean and clear. This is why we created Eventer. Go through
-        8 simple steps and plan you next family reunion or a meeting with friends in a restaurant.
-        Everything in 7 simple steps:
+        For most of the events and hangouts you run, you don’t need a robust app. You need a simple
+        form which will help you keep things clean and clear. This is why we created Eventer.
       </Text>
-      <Container fontSize='1.5rem' fontWeight='300'>
-        <Text>1. What</Text>
-        <Text>2. When</Text>
-        <Text>3. Where</Text>
-        <Text>4. Guests</Text>
-        <Text>5. Food</Text>
-        <Text>6. Budget</Text>
-        <Text>7. Schedule</Text>
+      <Text as='h3' fontSize='1.2rem' fontWeight='200'>
+        Go through 7 simple steps and plan you next family reunion or a meeting with friends in a
+        restaurant. Everything in 7 simple steps:
+      </Text>
+      <Container fontSize='1.5rem' fontWeight='250'>
+        <Text display='flex' alignItems='center' gap='0.75rem'>
+          <PiNumberSquareOneFill size='30' color='#00C7A3' /> What
+        </Text>
+        <Text display='flex' alignItems='center' gap='0.75rem'>
+          <PiNumberSquareTwoFill size='30' color='#00C7A3' /> When
+        </Text>
+        <Text display='flex' alignItems='center' gap='0.75rem'>
+          <PiNumberSquareThreeFill size='30' color='#00C7A3' /> Where
+        </Text>
+        <Text display='flex' alignItems='center' gap='0.75rem'>
+          <PiNumberSquareFourFill size='30' color='#00C7A3' /> Guests
+        </Text>
+        <Text display='flex' alignItems='center' gap='0.75rem'>
+          <PiNumberSquareFiveFill size='30' color='#00C7A3' /> Food
+        </Text>
+        <Text display='flex' alignItems='center' gap='0.75rem'>
+          <PiNumberSquareSixFill size='30' color='#00C7A3' /> Budget
+        </Text>
+        <Text display='flex' alignItems='center' gap='0.75rem'>
+          <PiNumberSevenFill size='30' color='#00C7A3' /> Schedule
+        </Text>
       </Container>
       <Text as='h3' size='xs' fontWeight='200' fontSize='1.2rem'>
         At the end print your summary to PDF and share with all involved.

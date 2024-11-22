@@ -44,11 +44,12 @@ const Food = () => {
               </Tr>
             </Thead>
             <Tbody>
-              {FOODPRODUCTS_LIST.map(({ number, name, bought, comment }) => {
+              {FOODPRODUCTS_LIST.map(({ number, name, amount, bought, comment }) => {
                 return (
                   <Tr key={number}>
                     <Td>{number}</Td>
                     <Td>{name}</Td>
+                    <Td>{amount}</Td>
                     <Td>{bought}</Td>
                     <Td>{comment}</Td>
                   </Tr>

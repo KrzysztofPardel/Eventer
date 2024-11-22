@@ -29,10 +29,7 @@ const Hero = () => {
       <Container>
         <Text as='h3' fontWeight='200' fontSize='1.2rem' textAlign='center' fontStyle='italic'>
           The most successful event is the one that achieves your goals and exceeds your
-          expectations'
-        </Text>
-        <Text as='h3' fontWeight='200' fontSize='1rem' textAlign='center'>
-          Unknown
+          expectations
         </Text>
       </Container>
     </Container>
